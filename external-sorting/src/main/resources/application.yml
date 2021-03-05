@@ -1,0 +1,21 @@
+cluster:
+  instances:
+    - '192.1.0.101:8080'
+    - '192.1.0.102:8080'
+    - '192.1.0.103:8080'
+    - '192.1.0.104:8080'
+    - '192.1.0.105:8080'
+    - '192.1.0.106:8080'
+    - '192.1.0.107:8080'
+    - '192.1.0.108:8080'
+
+aws:
+  download.bucket: cloud-based-data-processing-1
+  download.key: cloud-sort
+  upload.bucket: aws-external-sorting
+  upload.key: output/sorted-data
+
+processor:
+  writer.pool: 3
+  worker.pool: 10
+  records.file: 500000 # ~50MB file

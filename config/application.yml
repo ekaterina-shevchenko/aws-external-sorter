@@ -1,0 +1,3 @@
+aws:
+  download.bucket: aws-external-sorting-input-data
+  download.key: unsorted-data
